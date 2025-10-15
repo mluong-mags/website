@@ -5,21 +5,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../CSS/homepage.css" />
-    <link rel="icon" href="" />
-    <script src="../Scripts/homepage.js"></script>    
+    <link rel="icon" href="../Assets/Icon.png" />
+    <script src="../Scripts/homepage.js"></script> 
+    <background src="../Assets/background.jpg" alt="Background Image" /></background>  
   </head>
 
-<div class="header">
-  
-</div>
-
-<div class="topnav" id="myTopnav">
+<div class="topnav">
   <a href="index.html">Home</a>
   <a href="techblock.html">Technology Block</a>
   <a href="sculpture.html">Sculpture</a>
   <a href="interaction.html" class="active">Interactive Model</a>
   <div class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">Tech Subjects</a>
+    <button class="dropbtn">Tech Subjects ▾</button>
     <div class="dropdown-content">
       <a href="Subject_Pages/carpentry.html">Carpentry</a>
       <a href="Subject_Pages/dvc.html">DVC</a>
@@ -28,12 +25,13 @@
       <a href="Subject_Pages/product.html">Product Design</a>
     </div>
   </div>
-  <a href="contact.html" class="right">Contact</a>
-  </a>
+  <a href="Acknowledgements.html" class="right">Acknowledgements</a>
 </div>
 
 <body>
-    
+  <div class="header">
+    <h1>Interactive Model</h1>
+  </div>
+  <canvas id="gl-canvas" width="640" height="480"></canvas>
 </body>
-
 </html>
