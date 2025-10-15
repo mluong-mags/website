@@ -130,6 +130,10 @@ body {
   background-color: #d2ecff;
 }
 
+.dropdown-content .active {
+  color: white
+}
+
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
