@@ -7,51 +7,52 @@
     <link rel="stylesheet" href="../CSS/homepage.css" />
     <link rel="icon" href="../Assets/Icon.png" />
     <script src="../Scripts/homepage.js"></script> 
-    <background src="../Assets/background.jpg" alt="Background Image" /></background>  
   </head>
 
 <body>
-<div class="topnav">
-  <a href="index.html" class="active">Home</a>
-  <a href="techblock.html">Technology Block</a>
-  <a href="sculpture.html">Sculpture</a>
-  <a href="interaction.html">Interactive Model</a>
-  <div class="dropdown">
-    <button class="dropbtn">Tech Subjects ▾</button>    </button>
-    <div class="dropdown-content">
-      <a href="Subject_Pages/carpentry.html">Carpentry</a>
-      <a href="Subject_Pages/dvc.html">DVC</a>
-      <a href="Subject_Pages/food.html">Food Tech</a>
-      <a href="Subject_Pages/digital.html">Digital Tech</a>
-      <a href="Subject_Pages/product.html">Product Design</a>
+  <nav>
+  <ul class="topnav">
+    <li><a href="index.html" class="active logo"><img src="../Assets/Icon.png" alt="Mags Logo" width="40px" height="40px"></a></li>
+    <li class="hideOnMobile"><a href="techblock.html">Technology Block</a></li>
+    <li class="hideOnMobile"><a href="sculpture.html">Sculpture</a></li>
+    <li class="hideOnMobile"><a href="interaction.html">Interactive Model</a></li>
+    <li class="dropdown">
+      <button class="dropbtn hideOnMobile">Tech Subjects ▾</button>
+      <ul class="dropdown-content hideOnMobile">
+        <li><a href="Subject_Pages/carpentry.html">Carpentry</a></li>
+        <li><a href="Subject_Pages/dvc.html">DVC</a></li>
+        <li><a href="Subject_Pages/food.html">Food Tech</a></li>
+        <li><a href="Subject_Pages/digital.html">Digital Tech</a></li>
+        <li><a href="Subject_Pages/product.html">Product Design</a></li>
+      </ul>
+    </li>
+    <li class="hideOnMobile"><a href="Acknowledgements.html" class="right">Acknowledgements</a></li>
+    <li onclick=showSidebar() class="menu-button"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#0156AA"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+
+  </ul>
+  <ul class="sidebar">
+    <li onclick=hideSidebar() class="exit"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#0156AA"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+    <li class="fullWidth"><a href="techblock.html">Technology Block</a></li>
+    <li class="fullWidth"><a href="sculpture.html">Sculpture</a></li>
+    <li class="fullWidth"><a href="interaction.html">Interactive Model</a></li>
+    <li class="fullWidth"><a href="Subject_Pages/carpentry.html">Carpentry</a></li>
+    <li class="fullWidth"><a href="Subject_Pages/dvc.html">DVC</a></li>
+    <li class="fullWidth"><a href="Subject_Pages/food.html">Food Tech</a></li>
+    <li class="fullWidth"><a href="Subject_Pages/digital.html">Digital Tech</a></li>
+    <li class="fullWidth"><a href="Subject_Pages/product.html">Product Design</a></li>
+    </li>
+    <li class="fullWidth"><a href="Acknowledgements.html" class="right">Acknowledgements</a></li>
+  </ul>
+  </nav>
+  
+  <main>
+    <div class="header">
+      <h1>HOME PAGE</h1>
     </div>
-  </div>
-  <a href="Acknowledgements.html" class="right">Acknowledgements</a>
-</div>
+  </main>
+  <footer>
 
-
-  <div class="header">
-    <h1>Home Page</h1>
-  </div>
-
-  <div class="image-gallery">
-    <img src="../Assets/CAD_Render.png" alt="CAD Render" />
-    <img src="../Assets/Design_1_Home.png" alt="Design 1 Home" />
-    <img src="../Assets/Design_1_Gallery.png" alt="Design 1 Gallery" />
-    <img src="../Assets/Design_1_Model.png" alt="Design 1 Model" />
-    <img src="../Assets/Design_1_Sketch.png" alt="Design 1 Sketch" />
-    <img src="../Assets/Design_2_Home_1.png" alt="Design 2 Home 1" />
-    <img src="../Assets/Design_2_Home_2.png" alt="Design 2 Home 2" />
-    <img src="../Assets/Design_2_Gallery_1.png" alt="Design 2 Gallery 1" />
-    <img src="../Assets/Design_2_Gallery_2.png" alt="Design 2 Gallery 2" />
-    <img src="../Assets/Design_2_Model_1.png" alt="Design 2 Model 1" />
-    <img src="../Assets/Design_2_Model_2.png" alt="Design 2 Model 2" />
-    <img src="../Assets/Design_2_Sketch.png" alt="Design 2 Sketch" />
-    <img src="../Assets/Design_3_Home.png" alt="Design 3 Home" />
-    <img src="../Assets/Design_3_Gallery.png" alt="Design 3 Gallery" />
-    <img src="../Assets/Design_3_Model.png" alt="Design 3 Model" />
-    <img src="../Assets/Design_3_Sketch.png" alt="Design 3 Sketch" />
-  </div>
+  </footer>
 </body>
 
 </html>
