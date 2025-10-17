@@ -58,7 +58,7 @@ nav li:first-child{
   position: fixed;
   top: 0;
   right: 0;
-  background-color: #ffcd0522;
+  background-color: #ffcd0561;
   backdrop-filter: blur(10px);
   z-index: 999;
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
@@ -187,6 +187,22 @@ footer {
   margin-top: 50px;
 }
 
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  gap: 2em;
+  margin: 50px;
+}
+
+.item img {
+  object-fit: fill;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
 @media(max-width: 944px) {
   .hideOnMobile {
     display: none;
@@ -202,7 +218,7 @@ footer {
   }
 }
 
-@media(max-width: 716px) {
+@media(max-width: 750px) {
   h1{
     font-size: 42px;
   }
@@ -214,6 +230,11 @@ footer {
 
   .textWall .big {
     font-size: 28px;
+  }
+
+  .gallery {
+    margin: 20px;
+    gap: 1.5em;
   }
 }
 
