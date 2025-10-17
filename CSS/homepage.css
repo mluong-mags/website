@@ -93,6 +93,7 @@ nav li:first-child{
 /* Add a background color to navbar links on hover */
 .topnav a:hover, .dropdown:hover .dropbtn {
   background-color: #9FCAED;
+  color: black;
 }
 
 /* Dropdown content (hidden by default) */
@@ -111,6 +112,8 @@ nav li:first-child{
   color: black;
   text-decoration: none;
   display: block;
+  align-content: center;
+  text-align: center;
 }
 
 /* Add a grey background color to dropdown links on hover */
@@ -129,6 +132,7 @@ nav li:first-child{
 
 .active {
   background-color: #0156AA;
+  color: white;
 }
 
 .active a {
