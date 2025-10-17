@@ -6,8 +6,6 @@
 body {
   min-height: 100vh;
   background-image: url(../Assets/Background.jpg);
-  background-size: cover;
-  background-position: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -37,6 +35,7 @@ nav a {
   display: flex;
   color: black;
   align-items: center;
+  text-align: center;
   text-decoration: none;
 }
 
@@ -158,6 +157,36 @@ h1 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.textWall {
+  width: auto;
+  margin: 50px 150px;
+  background-color: #ffffff22;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.textWall p {
+  font-size: 24px;
+  color: black;
+  line-height: 2em;
+  margin-top: 20px;
+}
+
+.textWall .big {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #9fcaed80;
+  margin-top: 50px;
+}
+
 @media(max-width: 944px) {
   .hideOnMobile {
     display: none;
@@ -166,9 +195,29 @@ h1 {
   .menu-button {
     display: block;
   }
+
+  .textWall {
+    margin: 50px 20px;
+    padding: 20px;
+  }
 }
 
-@media(max-width: 400px) {
+@media(max-width: 716px) {
+  h1{
+    font-size: 42px;
+  }
+
+  .textWall p {
+    font-size: 20px;
+    line-height: 1.8em;
+  }
+
+  .textWall .big {
+    font-size: 28px;
+  }
+}
+
+@media(max-width: 480px) {
   .sidebar {
     width: 100%;
   }
@@ -192,5 +241,18 @@ h1 {
 
   nav li{
     height: 40px;
+  }
+
+  .textWall {
+    margin: 20px;
+  }
+
+  .textWall p {
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+  .textWall .big {
+    font-size: 24px;
   }
 }
