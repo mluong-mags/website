@@ -182,6 +182,7 @@ h1 {
 
 footer {
   text-align: center;
+  justify-items: center;
   padding: 20px 0;
   background-color: #9fcaed80;
   margin-top: 50px;
@@ -262,6 +263,14 @@ footer {
   width: 100%;
   border-radius: 10px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+hr {
+  border: none;
+  height: 3px;
+  background-color: black;
+  width: 80%;
+  margin: 20px 0;
 }
 
 @media(max-width: 960px) {
