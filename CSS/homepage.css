@@ -58,7 +58,7 @@ nav li:first-child{
   position: fixed;
   top: 0;
   right: 0;
-  background-color: #ffcd0561;
+  background-color: #ffcd05a4;
   backdrop-filter: blur(10px);
   z-index: 999;
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
@@ -189,8 +189,8 @@ footer {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-auto-rows: 300px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-auto-rows: 233px;
   justify-content: center;
   gap: 2em;
   margin: 50px;
@@ -198,15 +198,7 @@ footer {
 
 .header_img {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  justify-content: center;
-  gap: 2em;
-  margin: 50px;
-}
-
-.homepage_links {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   justify-content: center;
   gap: 2em;
   margin: 50px;
@@ -220,15 +212,56 @@ footer {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
-.item a {
+.page p {
   text-decoration: none;
   color: black;
   font-size: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   margin-top: 10px;
-  background-color: #ffffff57;
+  background-color: #ffcd05a4;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.page h2 {
+  text-decoration: none;
+  margin-top: 10px;
+  font-size: 28px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0156AA;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.page a {
+  text-decoration: none;
+}
+
+.page h2:hover {
+  background-color: #9FCAED;
+  color: black;
+}
+
+.directory {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  justify-content: center;
+  gap: 2em;
+  margin: 50px;
+}
+
+.page img {
+  object-fit: cover;
+  height: 280px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 @media(max-width: 960px) {
