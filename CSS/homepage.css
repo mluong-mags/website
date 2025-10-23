@@ -365,6 +365,7 @@ nav a:hover, .dropdown:hover .dropbtn, .dropdown-content a:hover {
   text-align: center;
   justify-content: center;
   align-content: center;
+  margin-left: 1em;
 }
 
 .card img {
