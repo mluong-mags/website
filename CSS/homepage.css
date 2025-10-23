@@ -229,6 +229,8 @@ x3d-canvas {
   height: 600px;
   border-radius: 10px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  justify-content: center;
 }
 
 .page p {
