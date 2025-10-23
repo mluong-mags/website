@@ -2,24 +2,49 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 4.0//EN" "https://www.web3d.org/specifications/x3d-4.0.dtd">
 <X3D profile='Interchange' version='4.0' xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' xsd:noNamespaceSchemaLocation='https://www.web3d.org/specifications/x3d-4.0.xsd'>
   <head>
-    <component name='ParticleSystems' level='3'/>
+    <component name='Layering' level='1'/>
+    <component name='Text' level='1'/>
+    <meta name='created' content='Fri, 27 Jan 2023 00:38:16 GMT'/>
+    <meta name='comment' content='Rise and Shine'/>
+    <meta name='creator' content='Holger Seelig'/>
+    <meta name='generator' content='Sunrize X3D Editor V1.1.2, https://create3000.github.io/sunrize/'/>
+    <meta name='generator' content='x3d-tidy V1.0.102, https://www.npmjs.com/package/x3d-tidy'/>
+    <meta name='modified' content='Wed, 15 Nov 2023 02:01:38 GMT'/>
   </head>
   <Scene>
-    <Background
-        transparency='0.75'/>
-    <Viewpoint
-        description='Initial View'
-        position='4.737889 4.718629 7.435519'
-        orientation='-0.640652763184828 0.744770464531058 0.186764536745701 0.746185800293648'/>
-    <ParticleSystem
-        geometryType='GEOMETRY'
-        maxParticles='1'
-        bboxSize='10 10 10'>
-      <Appearance>
-        <Material
-            diffuseColor='0 0.5 1'/>
-      </Appearance>
-      <Box/>
-    </ParticleSystem>
+    <LayerSet
+        activeLayer='1'
+        order='1, 2'>
+      <Layer>
+        <Background
+            skyColor='0.8 0.8 0.8'/>
+        <Viewpoint
+            description='Initial View'
+            position='0 0 16.67313'/>
+        <Transform
+            rotation='1 0 0 4.71238898038469'>
+          <Inline
+              url='"assets/WikipediaGlobeOnePiece.stl.gz"'/>
+        </Transform>
+      </Layer>
+      <Layer>
+        <Transform DEF='Text'
+            translation='6.8 -3.8 0'>
+          <Shape>
+            <Appearance>
+              <Material
+                  diffuseColor='0 0 0'/>
+            </Appearance>
+            <Text
+                string='"STL Model of Wikipedia Logo"'>
+              <FontStyle
+                  family='"SANS"'
+                  size='0.4'
+                  justify='"END"'/>
+            </Text>
+          </Shape>
+        </Transform>
+      </Layer>
+    </LayerSet>
   </Scene>
 </X3D>
