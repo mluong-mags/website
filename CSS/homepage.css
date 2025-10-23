@@ -258,7 +258,7 @@ x3d-canvas {
   color: black;
   text-align: center;
   background-color: antiquewhite;
-  margin: -100px 110px 0 110px;
+  margin: -100px 110px 110px 110px;
   padding: 10px;
 }
 
