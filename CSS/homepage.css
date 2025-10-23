@@ -204,6 +204,9 @@ footer {
   gap: 2em;
   margin: 50px;
 }
+.item{
+  text-align: center;
+}
 
 .item img {
   object-fit: cover;
