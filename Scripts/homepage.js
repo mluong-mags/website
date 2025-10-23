@@ -7,9 +7,3 @@ function hideSidebar() {
     const sidebar = document.querySelector(".sidebar");
     sidebar.style.display = "none";
 }
-$("<button></button>")
-    .attr ("title", "View all objects in scene.")
-    .on ("click", () =>
-    {
-        browser .viewAll ();
-    })
