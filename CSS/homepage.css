@@ -254,7 +254,7 @@ x3d-canvas {
 
 .int_text h2 {
   text-decoration: none;
-  font-size: 28px;
+  font-size: auto;
   color: black;
   text-align: center;
   background-color: antiquewhite;
