@@ -101,28 +101,20 @@ nav a:hover {
   text-align: center;
 }
 
-.dropdown-content a:hover {
-  background-color: #d2ecff;
-}
-
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
 /* Add a background color to navbar links on hover */
-nav a:hover, .dropdown:hover .dropbtn {
+nav a:hover, .dropdown:hover .dropbtn, .dropdown-content a:hover {
   background-color: #9FCAED;
   color: black;
 }
 
 /* Styling for active pages */
-.active {
+.active, .dropdown-content .active, .active a{
   background-color: #0156AA;
-  color: white;
-}
-
-.active a {
   color: white;
 }
 
@@ -251,50 +243,51 @@ nav a:hover, .dropdown:hover .dropbtn {
 }
 
 /* Sizes the banner image */
-.header_img .item{
+.header_img .item {
   aspect-ratio: 16/9;
   height: auto;
 }
 
-/* Styles the div box containing the interactive models and error codes */
-.int_model {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  justify-items: center;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  row-gap: 2em;
-  margin: 110px auto;
-}
-
-/* Styles the canvas of the 3D models */
-x3d-canvas {
-  aspect-ratio: 16/9;
-  width: 85%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
-  color: red;
-}
-
-/* Styles the h2 text under the interactive model */
-.int_text h2 {
-  text-decoration: none;
-  width: 85%;
-  font-size: auto;
-  color: black;
+.button {
+  width: 60%;
+  margin: 50px auto;
   text-align: center;
-  background-color: antiquewhite;
-  margin: auto;
-  margin-top: -100px;
-  padding: 10px;
 }
 
-.padding{
+.button h2 {
+  text-decoration: none;
+  font-size: 26px;
+  color: white;
+  background-color: #0156AA;
+  padding: 30px 50px;
+  border-radius: 10px;
+}
+
+/* Removes the standard text decoration of the links */
+.button a {
+  text-decoration: none;
+}
+
+/* Changes text color and background on hover */
+.button h2:hover {
+  background-color: #9FCAED;
+  color: black;
+}
+
+/* Styles the padding around the carousel */
+.padding {
   margin: auto 110px;
+  justify-content: center;
+}
+
+.padding h1 {
+  width: 98%;
+  font-size: 2.5em;
+  text-align: center;
+  margin: -10px 0 50px 0;
+  padding: 1%;
+  background-color: #0156AA;
+  color: white;
 }
 
 /* Styles the container for the image carousel */
@@ -382,6 +375,43 @@ x3d-canvas {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Styles the div box containing the interactive models and error codes */
+.int_model {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  row-gap: 2em;
+  margin: 110px auto;
+}
+
+/* Styles the canvas of the 3D models */
+x3d-canvas {
+  aspect-ratio: 16/9;
+  width: 85%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  color: red;
+}
+
+/* Styles the h2 text under the interactive model */
+.int_text h2 {
+  text-decoration: none;
+  width: 85%;
+  font-size: auto;
+  color: black;
+  text-align: center;
+  background-color: antiquewhite;
+  margin: auto;
+  margin-top: -100px;
+  padding: 10px;
+}
+
 /* Styles for the text wall in the Acknowledgements page */
 .textWall {
   width: auto;
@@ -412,7 +442,7 @@ footer {
   justify-items: center;
   justify-content: center;
   padding: 20px 0;
-  background-color: #9fcaed80;
+  background-color: #FFCB05;
   margin-top: 50px;
 }
 
@@ -466,6 +496,15 @@ hr {
     gap: 1.5em;
   }
 
+  .button {
+    width: 70%;
+    margin: 30px auto;
+  }
+
+  .button h2 {
+    font-size: 22px;
+  }
+
   .int_model{
     margin: 50px auto;
   }
@@ -475,7 +514,12 @@ hr {
   }
 
   .padding{
-    margin: auto 50px;
+    margin: 50px;
+  }
+
+  .padding h1{
+    font-size: 1.75em;
+    margin: -20px 0 50px 0;
   }
 
   .carousel::scroll-button(right), .carousel::scroll-button(left){
@@ -531,8 +575,22 @@ hr {
     padding: 30px 0;
   }
 
+  .button {
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  .button h2 {
+    font-size: 18px;
+  }
+
   .padding{
-    margin: auto 10px;
+    margin: 10px;
+  }
+
+  .padding h1{
+    font-size: 1.3em;
+    margin: -30px 0 30px 0;
   }
 
   .carousel::scroll-button(right), .carousel::scroll-button(left){
