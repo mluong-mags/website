@@ -531,7 +531,7 @@ hr {
   }
 
   .padding{
-    margin: auto 20px;
+    margin: auto 10px;
   }
 
   .carousel::scroll-button(right), .carousel::scroll-button(left){
