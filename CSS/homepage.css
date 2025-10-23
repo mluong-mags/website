@@ -204,6 +204,7 @@ footer {
   gap: 2em;
   margin: 50px;
 }
+
 .item{
   text-align: center;
 }
@@ -229,6 +230,16 @@ x3d-canvas {
   height: 600px;
   align-items: center;
   justify-content: center;
+}
+
+.error{
+  text-align: center;
+}
+
+.error img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .page p {
