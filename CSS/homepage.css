@@ -365,7 +365,6 @@ nav a:hover, .dropdown:hover .dropbtn, .dropdown-content a:hover {
   text-align: center;
   justify-content: center;
   align-content: center;
-  margin-left: 1em;
 }
 
 .card img {
@@ -374,6 +373,7 @@ nav a:hover, .dropdown:hover .dropbtn, .dropdown-content a:hover {
   width: 100%;
   border-radius: 10px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  margin-left: 1em;
 }
 
 /* Styles the div box containing the interactive models and error codes */
