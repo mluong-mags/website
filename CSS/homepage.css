@@ -4,11 +4,6 @@
  	padding: 0;
  }
 
- /* Removes every scrollbar */
- ::-webkit-scrollbar {
-  display: none;
-}
-
 /* Styles the default h1 tag values */
 h1 {
   color: black;
@@ -297,20 +292,82 @@ x3d-canvas {
   padding: 10px;
 }
 
+.padding{
+  margin: auto 110px;
+}
+
 /* Styles the container for the image carousel */
 .carousel {
-  width: 85%;
+  width: 100%;
   overflow-x: auto;
-  margin: 50px auto;
+  margin: 3em auto;
   display: flex;
   gap: 1em;
+  scroll-behavior: smooth;
+  anchor-name: --carousel;
+  scroll-snap-type: x mandatory;
+  scroll-marker-group: after;
+}
+
+.carousel::scroll-marker-group {
+  margin: -40px 0 50px 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.5em
+}
+
+.card::scroll-marker{
+  content: " ";
+  height: 1em;
+  width: 1em;
+  background-color: #0156aa40;
+  border-radius: 50%;
+}
+
+.card::scroll-marker:target-current{
+  background-color: #0156AA;
+}
+
+ /* Removes the scrollbar */
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel::scroll-button(right), .carousel::scroll-button(left){
+  content: "▶";
+  border: none;
+  background-color: #0156AA;
+  font-size: 24px;
+  color: white;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  padding-bottom: 0.1em;
+  cursor: pointer;
+  position: fixed;
+  position-anchor: --carousel;
+  position-area: right center;
+  translate: -50%
+}
+
+.carousel::scroll-button(left){
+  content: "◀";
+  position-area: left center;
+  translate: 50%
+}
+
+.carousel::scroll-button(right):disabled, .carousel::scroll-button(left):disabled{
+  opacity: 0.5;
+  cursor: auto;
 }
 
 /* Styles each card and image in the image carousel */
 .card {
+  scroll-snap-align: start;
   flex: 0 0 100%;
   height: auto;
   aspect-ratio: 16/9;
+  border-radius: 0.5em;
   text-align: center;
   justify-content: center;
   align-content: center;
@@ -414,6 +471,10 @@ hr {
 
   .int_text h2{
     margin: -40px 0 auto;
+  }
+
+  .padding{
+    margin: auto 50px;
   }
 
   .textWall {
