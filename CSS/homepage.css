@@ -1,14 +1,31 @@
+/* Removes padding and margins for the webpages */
 * {
  	margin: 0;
  	padding: 0;
  }
 
+ /* Removes every scrollbar */
+ ::-webkit-scrollbar {
+  display: none;
+}
+
+/* Styles the default h1 tag values */
+h1 {
+  color: black;
+  font-size: 64px;
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ /* Sets a minimum height of 100% viewport height for the body, adds a background and sets the default font for items in the body */
 body {
   min-height: 100vh;
   background-image: url(../Assets/Background.png);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Styles the for the top navigation bar */
 nav {
   width: 100%;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
@@ -27,6 +44,10 @@ nav ul{
 
 nav li {
   height: 50px;
+}
+
+nav li:first-child{
+  margin-right: auto;
 }
 
 nav a {
@@ -48,38 +69,14 @@ nav a:hover {
   color: black
 }
 
-nav li:first-child{
-  margin-right: auto;
-}
+/* Styles for the dropdown menu on the top navigation bar */
 
-.sidebar {
-  height: 100vh;
-  width: 200px;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: #ffcd05a4;
-  backdrop-filter: blur(10px);
-  z-index: 999;
-  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
-  display: none;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
-.sidebar .fullWidth{
-  width: 100%;
-}
-
-/* The dropdown container */
-.dropdown {
+.dropdown { /* The dropdown container */
   float: left;
   overflow: hidden;
 }
 
-/* Dropdown button */
-.dropdown .dropbtn {
+.dropdown .dropbtn { /* Dropdown button */
   font-size: 16px;
   border: none;
   outline: none;
@@ -87,12 +84,6 @@ nav li:first-child{
   height: 50px;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
-}
-
-/* Add a background color to navbar links on hover */
-.topnav a:hover, .dropdown:hover .dropbtn {
-  background-color: #9FCAED;
-  color: black;
 }
 
 /* Dropdown content (hidden by default) */
@@ -115,13 +106,8 @@ nav li:first-child{
   text-align: center;
 }
 
-/* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
   background-color: #d2ecff;
-}
-
-.dropdown-content .active {
-  color: white
 }
 
 /* Show the dropdown menu on hover */
@@ -129,6 +115,13 @@ nav li:first-child{
   display: block;
 }
 
+/* Add a background color to navbar links on hover */
+nav a:hover, .dropdown:hover .dropbtn {
+  background-color: #9FCAED;
+  color: black;
+}
+
+/* Styling for active pages */
 .active {
   background-color: #0156AA;
   color: white;
@@ -138,10 +131,33 @@ nav li:first-child{
   color: white;
 }
 
+/* Styles for the side navigation bar for smaller screens */
+.sidebar {
+  height: 100vh;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #ffcd05a4;
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sidebar .fullWidth{
+  width: 100%;
+}
+
+/* Hides the menu button initially */
 .menu-button {
   display: none;
 }
 
+/* Styles for the header of the pages */
 .header {
   display: block;
   text-align: center;
@@ -149,14 +165,166 @@ nav li:first-child{
   padding: 60px 0;
 }
 
-h1 {
-  color: black;
-  font-size: 64px;
-  padding: 0;
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Styles the page directory on the home page */
+.directory {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  justify-content: center;
+  gap: 2em;
+  margin: 50px;
 }
 
+/* Styles the image for the descriptions of each page */
+.page img {
+  object-fit: cover;
+  height: 280px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles the titles of each of the pages */
+.page h2 {
+  text-decoration: none;
+  margin-top: 10px;
+  font-size: 28px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0156AA;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+/* Styles the descriptions of each of the website pages */
+.page p {
+  color: black;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  background-color: #ffcd05a4;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Removes the standard text decoration of the links */
+.page a {
+  text-decoration: none;
+}
+
+/* Changes text color and background on hover */
+.page h2:hover {
+  background-color: #9FCAED;
+  color: black;
+}
+
+/* Styles for the box containing the image galleries */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-auto-rows: 233px;
+  justify-content: center;
+  gap: 2em;
+  margin: 50px;
+}
+
+/* Styles the images in the images galleries */
+.item {
+  text-align: center;
+}
+
+.item img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles the box containing the banner image on some of the pages */
+.header_img {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  justify-content: center;
+  gap: 2em;
+  margin: 50px 110px;
+}
+
+/* Sizes the banner image */
+.header_img .item{
+  aspect-ratio: 16/9;
+  height: auto;
+}
+
+/* Styles the div box containing the interactive models and error codes */
+.int_model {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  row-gap: 2em;
+  margin: 110px auto;
+}
+
+/* Styles the canvas of the 3D models */
+x3d-canvas {
+  aspect-ratio: 16/9;
+  width: 85%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  color: red;
+}
+
+/* Styles the h2 text under the interactive model */
+.int_text h2 {
+  text-decoration: none;
+  width: 85%;
+  font-size: auto;
+  color: black;
+  text-align: center;
+  background-color: antiquewhite;
+  margin: auto;
+  margin-top: -100px;
+  padding: 10px;
+}
+
+/* Styles the container for the image carousel */
+.carousel {
+  width: 85%;
+  overflow-x: auto;
+  margin: 50px auto;
+  display: flex;
+  gap: 1em;
+}
+
+/* Styles each card and image in the image carousel */
+.card {
+  flex: 0 0 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.card img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for the text wall in the Acknowledgements page */
 .textWall {
   width: auto;
   margin: 50px 150px;
@@ -180,151 +348,43 @@ h1 {
   text-align: center;
 }
 
+/* Styles for the footer on all pages */
 footer {
   text-align: center;
   justify-items: center;
+  justify-content: center;
   padding: 20px 0;
   background-color: #9fcaed80;
   margin-top: 50px;
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-auto-rows: 233px;
-  justify-content: center;
-  gap: 2em;
-  margin: 50px;
-}
-
-.header_img {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  justify-content: center;
-  gap: 2em;
-  margin: 50px 110px;
-}
-
-.header_img .item{
-  aspect-ratio: 16/9;
-  height: auto;
-}
-
-.item{
-  text-align: center;
-}
-
-.item img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-}
-
-.int_model {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  justify-items: center;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  gap: 2em;
-  margin: 110px;
-}
-
-x3d-canvas {
-  aspect-ratio: 16/9;
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: red;
-}
-
-.page p {
-  text-decoration: none;
-  color: black;
-  font-size: 18px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-top: 10px;
-  background-color: #ffcd05a4;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.int_text h2 {
-  text-decoration: none;
-  font-size: auto;
-  color: black;
-  text-align: center;
-  background-color: antiquewhite;
-  margin: -100px 110px 110px 110px;
-  padding: 10px;
-}
-
-.page h2 {
-  text-decoration: none;
-  margin-top: 10px;
-  font-size: 28px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #0156AA;
-  padding: 5px;
-  border-radius: 10px;
-}
-
-.page a {
-  text-decoration: none;
-}
-
-.page h2:hover {
-  background-color: #9FCAED;
-  color: black;
-}
-
-.directory {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  justify-content: center;
-  gap: 2em;
-  margin: 50px;
-}
-
-.page img {
-  object-fit: cover;
-  height: 280px;
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-}
-
+/* Styles the horizontal bar in the footer */
 hr {
   border: none;
   height: 3px;
   background-color: black;
   width: 80%;
   margin: 20px 0;
+  text-align: center;
 }
 
+/* Responsive CSS for screen widths < 875px*/
 @media(max-width: 875px) {
   h1{
     font-size: 48px;
   }
 
-  .header {
-    padding: 45px 0;
+  nav{
+    height: 45px;
   }
 
-  .textWall p {
-    font-size: 20px;
-    line-height: 1.8em;
+  nav li{
+    height: 45px;
+  }
+
+  .logo img {
+    width: 35px;
+    height: 35px;
   }
 
   .hideOnMobile {
@@ -335,13 +395,12 @@ hr {
     display: block;
   }
 
-  .textWall {
-    margin: 50px 20px;
-    padding: 20px;
+  .header {
+    padding: 45px 0;
   }
 
-  .textWall .big {
-    font-size: 28px;
+  .header_img{
+    margin: 50px;
   }
 
   .gallery {
@@ -349,43 +408,41 @@ hr {
     gap: 1.5em;
   }
 
-  .logo img {
-    width: 35px;
-    height: 35px;
-  }
-
-  nav{
-    height: 45px;
-  }
-
-  nav li{
-    height: 45px;
-  }
-
   .int_model{
-    margin: 50px;
-  }
-
-  .header_img{
-    margin: 50px;
+    margin: 50px auto;
   }
 
   .int_text h2{
-    margin: -40px 50px 50px 50px;
+    margin: -40px 0 auto;
+  }
+
+  .textWall {
+    margin: 50px 20px;
+    padding: 20px;
+  }
+
+  .textWall p {
+    font-size: 20px;
+    line-height: 1.8em;
+  }
+
+  .textWall .big {
+    font-size: 28px;
   }
 }
 
+/* Responsive CSS for screen widths < 540px*/
 @media(max-width: 540px) {
-  .sidebar {
-    width: 100%;
-  }
-
-  .header {
-    padding: 30px 0;
-  }
-
   h1 {
     font-size: 32px;
+  }
+
+  nav{
+    height: 40px;
+  }
+
+  nav li{
+    height: 40px;
   }
 
   .logo img {
@@ -393,12 +450,12 @@ hr {
     height: 30px;
   }
 
-  nav{
-    height: 40px;
+  .sidebar {
+    width: 100%;
   }
 
-  nav li{
-    height: 40px;
+  .header {
+    padding: 30px 0;
   }
 
   .textWall {
