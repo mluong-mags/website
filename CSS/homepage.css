@@ -360,6 +360,10 @@ hr {
   .int_model{
     margin: 50px;
   }
+
+  .int_text h2{
+    margin: -40px 50px 50px 50px;
+  }
 }
 
 @media(max-width: 540px) {
