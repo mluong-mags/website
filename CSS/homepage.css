@@ -221,6 +221,8 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   justify-items: center;
+  align-items: center;
+  justify-content: center;
   gap: 2em;
   margin: 50px;
 }
@@ -233,16 +235,6 @@ x3d-canvas {
   border-radius: 10px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   border-width: 5px;
-}
-
-.error{
-  text-align: center;
-}
-
-.error img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
 }
 
 .page p {
