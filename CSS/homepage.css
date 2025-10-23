@@ -230,6 +230,9 @@ x3d-canvas {
   height: 600px;
   align-items: center;
   justify-content: center;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  border-width: 5px;
 }
 
 .error{
